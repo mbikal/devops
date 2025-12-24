@@ -18,6 +18,6 @@ jobs:
         run: pylint app.py --exit-zero
       - name: Run Bandit (SAST - Security Scan)
         run: bandit -r . --exit-zero
-      - name: Run pytest test_app.py (functional test)
+      - name: Run pytest test_app.py --ignore=test_pku_tool.py (functional test)
         run: pytest
         
